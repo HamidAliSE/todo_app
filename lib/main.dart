@@ -44,15 +44,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: [
+          ElevatedButton(onPressed: _addTask, child: Text('Add Task')),
           ..._tasks.map((task) {
             return Text(task);
           }),
         ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _addTask,
-        tooltip: 'Add Task',
-        child: const Icon(Icons.add),
       ),
     );
   }
