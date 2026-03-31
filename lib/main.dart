@@ -42,15 +42,12 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: .center,
-          children: [
-            ..._tasks.map((task) {
-              return Text(task);
-            }),
-          ],
-        ),
+      body: Column(
+        children: [
+          ..._tasks.map((task) {
+            return Text(task);
+          }),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _addTask,
