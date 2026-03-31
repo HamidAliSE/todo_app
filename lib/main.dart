@@ -27,7 +27,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<String> _tasks = [];
+  final List<String> _tasks = [];
 
   void _addTask() {
     setState(() {
