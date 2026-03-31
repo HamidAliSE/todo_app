@@ -28,10 +28,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  List<String> _tasks = [];
 
   void _incrementCounter() {
     setState(() {
       _counter++;
+      _tasks.add('Task ${_tasks.length}');
     });
   }
 
@@ -51,6 +53,9 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            ..._tasks.map((task) {
+              return Text(task);
+            }),
           ],
         ),
       ),
